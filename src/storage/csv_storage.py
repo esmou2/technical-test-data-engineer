@@ -26,7 +26,7 @@ class CSVStorage(Storage):
 
             if not existing_data.empty and 'charged_at' in existing_data.columns:
                 existing_data['charged_at'] = pd.to_datetime(existing_data['charged_at'])
-                max_charged_at = existing_data['date_chargement'].max()
+                max_charged_at = existing_data['charged_at'].max()
                 logger.info(f"Max charged_at: {max_charged_at}")
 
                 data_df['created_at'] = pd.to_datetime(data_df['created_at'])
