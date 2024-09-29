@@ -4,7 +4,6 @@ from storage.csv_storage import CSVStorage
 
 
 if __name__ == "__main__":
-    print('test')
     # init the DataFetcher
     fetcher = APIDataFetcher()
     # init the json storage
