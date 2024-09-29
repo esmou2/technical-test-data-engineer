@@ -53,13 +53,6 @@ class CSVStorage(Storage):
             existing_data.to_csv(file_path, mode='w', index=False, header=True)
             logger.info(f"Data successfully saved to {file_path}")
 
-            # if not data_df.empty:
-            #     data_df['charged_at'] = current_datetime
-            #     data_df.to_csv(file_path, mode='a', index=False, header=not os.path.exists(file_path))
-            #     logger.info(f"Saved {len(data_df)} new records to {data_type}.csv")
-            # else:
-            #     logger.info(f"Saved {len(data_df)} new records to {data_type}.csv")
-
         except Exception as e:
             logger.error(f"Failed to save data to {file_path}: {e}")
 
