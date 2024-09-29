@@ -20,7 +20,7 @@ class DataPipeline:
 
             tracks_data = self.data_storage.save_data('tracks',tracks_data, 'id')
             users_data = self.data_storage.save_data('users',users_data, 'id')
-            listen_history_data = self.data_storage.save_data('listen_history',listen_history_data, 'user_id')
+            listen_history_data = self.data_storage.save_data('listen_history',listen_history_data,'user_id')
 
             logger.info('Pipeline executed successfully')
         except Exception as e:
