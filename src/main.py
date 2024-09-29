@@ -1,6 +1,6 @@
 from pipeline.api_data_fetcher import APIDataFetcher
 from pipeline.data_pipeline import DataPipeline
-from storage.json_storage import JsonStorage
+from storage.csv_storage import CSVStorage
 
 
 if __name__ == "__main__":
@@ -8,6 +8,6 @@ if __name__ == "__main__":
     # init the DataFetcher
     fetcher = APIDataFetcher()
     # init the json storage
-    json_storage = JsonStorage()
-    pipeline = DataPipeline(storage=json_storage, fetcher=fetcher)
+    csv_storage = CSVStorage()
+    pipeline = DataPipeline(storage=csv_storage, fetcher=fetcher)
     pipeline.run()

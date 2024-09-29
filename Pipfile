@@ -10,6 +10,7 @@ uvicorn = "*"
 fastapi-pagination = "*"
 pytest = "*"
 requests = "*"
+pandas = "*"
 
 [dev-packages]
 
