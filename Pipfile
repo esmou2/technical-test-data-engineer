@@ -11,6 +11,10 @@ fastapi-pagination = "*"
 pytest = "*"
 requests = "*"
 pandas = "*"
+aiohttp = "*"
+pytest-asyncio = "*"
+aioresponses = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
