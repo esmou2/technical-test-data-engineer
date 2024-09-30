@@ -8,3 +8,4 @@ aioresponses
 aiohttp
 pandas
 requests
+python-dotenv

@@ -2,31 +2,20 @@
 
 ## _Utilisation de la solution (étape 1 à 3)_
 
-j'ai utiliser **Pipenv** pour la gestion de l'environnement virtuel et des dépendances.
+j'ai utiliser **venv** pour la gestion de l'environnement virtuel et des dépendances.
 
 ---
 
-### 1. Préparer l'environnement
-```bash
-pip install pipenv
-```
 Créer et activer un environnement virtuel avec Pipenv
-Créer un environnement virtuel et installer les dépendances
 
 ```bash
-pipenv install --python 3.12
-
-```
-Activer l'environnement virtuel
-
-```bash
-pipenv shell
+venv\Scripts\activate
 ```
 ### 2. Installer les dépendances
 Une fois l'environnement virtuel activé, installez toutes les dépendances nécessaires définies dans le fichier requirements.txt.
 
 ```bash
-pipenv install -r requirements.txt
+pip install -r requirements.txt
 ```
 ### 4. Lancer l'API locale
 Placez vous dans le dossier `src/moovitamix_fastapi`, puis exécuter dans votre terminal l'instruction suivante `python -m uvicorn main:app --reload`. Vous retrouverz ensuite l'URL pour accéder à l'application en local. L'application vous redirige automatiquement vers le chemin /docs, si ce n'est pas le cas, rendez-vous directement à: <http://127.0.0.1:8000/docs>.
@@ -38,7 +27,6 @@ Le pipeline utilise des variables d'environnement pour l'URL de l'API et le rép
 ```bash
 # .env file
 API_URL=http://127.0.0.1:8000
-PAGE_SIZE=100
 STORAGE_DIR=data
 ```
 
@@ -46,7 +34,7 @@ Exécuter le pipeline
 Une fois l'API en cours d'exécution et les variables d'environnement configurées, vous pouvez exécuter le pipeline pour récupérer les données :
 
 ```bash
-python main.py
+python .\src\main.py
 ```
 
 ### 6. Lancer les tests unitaires

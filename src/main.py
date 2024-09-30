@@ -19,8 +19,7 @@ async def main():
         logger.info("Starting the data pipeline execution...")
 
         api_url = os.getenv("API_URL", "http://127.0.0.1:8000")
-        page_size = int(os.getenv("PAGE_SIZE", 100))
-        fetcher = APIDataFetcherAsync(api_url=api_url, page_size=page_size)
+        fetcher = APIDataFetcherAsync(api_url=api_url)
 
         storage_dir = os.getenv("STORAGE_DIR", "data")
         csv_storage = CSVStorage(storage_dir=storage_dir)
